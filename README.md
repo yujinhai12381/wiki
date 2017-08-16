@@ -1,2 +1,5 @@
 # wiki
-my wiki
+
+{{TOC}}
+
+##关于
