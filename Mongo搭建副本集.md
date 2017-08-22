@@ -49,6 +49,9 @@ port=27017
 fork=true
 replSet=test-rep
 ```
+如果修改/etc/mongod.conf配置文件可参考
+* [Configuration File Options](https://docs.mongodb.com/manual/reference/configuration-options/)
+
 3、启动mongodb
 ```
 mongod -f mongodb/conf/mongodb.conf
