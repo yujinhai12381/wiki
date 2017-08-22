@@ -85,3 +85,8 @@ rs.slaveOk();
 2、kill primary  secondary是否切成primary
 
 3、待补充
+
+## 参考文档
+
+* [mongo官方安装文档](https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-red-hat/)
+
