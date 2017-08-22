@@ -107,4 +107,4 @@ rs.slaveOk();
 * [我们的一个已投产项目的高可用数据库实战-mongo副本集的搭建详细过程
 ](http://www.2cto.com/database/201602/491168.html)
 * [MongoDB副本集概述
-] (http://www.cnblogs.com/magialmoon/p/3251330.html)
+](http://www.cnblogs.com/magialmoon/p/3251330.html)
