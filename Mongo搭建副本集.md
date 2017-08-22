@@ -40,6 +40,8 @@ yum install mongodb-org-3.2.10
 mkdir conf db log
 ```
 2、在conf目录下创建配置文件mongodb.conf
+
+replSet=test-rep 以副本集模式启动,否则为单机模式
 ```
 dbpath=/data/mongodb/db
 logpath=/data/mongodb/log/mongodb.log
