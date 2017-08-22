@@ -66,6 +66,21 @@ rs.add("172.17.0.2:27017")
 rs.add("172.17.0.2:27018")
 rs.add("172.17.0.2:27019")
 ```
+
+仲裁节点添加命令
+```
+rs.addArb('somehost:30000')
+```
+仲裁节点的作用：
+```
+通过实际测试发现，当整个副本集集群中达到50%的节点（包括仲裁节点）不可用的时候，
+剩下的节点只能成为secondary节点，整个集群只能读不能写。比如集群中有1个primary节点，
+2个secondary节点，加1个arbit节点时：当两个secondary节点挂掉了，
+那么剩下的原来的primary节点也只能降级为secondary节点；
+当集群中有1个primary节点，1个secondary节点和1个arbit节点，这时即使primary节点挂了，
+剩下的secondary节点也会自动成为primary节点。因为仲裁节点不复制数据，
+因此利用仲裁节点可以实现最少的机器开销达到两个节点热备的效果。
+```
 查看副本集状态
 ```
 rs.status() 
@@ -89,4 +104,5 @@ rs.slaveOk();
 ## 参考文档
 
 * [mongo官方安装文档](https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-red-hat/)
-
+* [我们的一个已投产项目的高可用数据库实战-mongo副本集的搭建详细过程
+](http://www.2cto.com/database/201602/491168.html)
